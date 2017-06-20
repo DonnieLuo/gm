@@ -1,13 +1,8 @@
 .idea
-.gradle
 build
 bin
-js
-css
 classes
-out
-production_app.properties
+target
 *.iml
 *.ipr
 *.iws
-src/main/resources/resources/bower_components
