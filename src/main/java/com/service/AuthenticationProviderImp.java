@@ -87,7 +87,6 @@ public class AuthenticationProviderImp extends AbstractUserDetailsAuthentication
 
         try {
             loadedUser = this.userDetailService.loadUserByUsername(username);
-//            loadedUser = new UserDetailService().loadUserByUsername(username);
         } catch (UsernameNotFoundException notFound) {
             if(authentication.getCredentials() != null) {
                 String presentedPassword = authentication.getCredentials().toString();

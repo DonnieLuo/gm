@@ -66,7 +66,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        /**
+         * 共四种：auth.jdbcAuthentication() auth.inMemoryAuthentication() auth.ldapAuthentication()
+         * 以及auth.userDetailsService(userDetailService())
+         */
         auth.userDetailsService(userDetailService());
+
 //        auth.authenticationProvider(new JwtAuthenticationProvider(baseUserService, tokenService));
         auth.authenticationProvider(new AuthenticationProviderImp(userRepository,userDetailService()));
 
